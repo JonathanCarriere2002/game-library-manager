@@ -1,0 +1,89 @@
+# --- Build outputs ---
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+bin/
+gen/
+out/
+**/build/
+
+# --- Gradle ---
+.gradle/
+!gradlew
+!gradlew.bat
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# --- Local configuration ---
+local.properties
+
+# --- IDE & Editor files ---
+.idea/
+*.iml
+*.iws
+*.ipr
+captures/
+.navigation/
+*.hprof
+
+# --- Logs ---
+*.log
+
+# --- NDK ---
+.externalNativeBuild/
+.cxx/
+
+# --- JetBrains generic output ---
+out/
+
+# --- OS generated ---
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# --- Kotlin ---
+*.kotlin_module
+
+# --- Crashlytics / Fabric ---
+crashlytics.properties
+fabric.properties
+
+# --- Keystore & Credentials (DO NOT COMMIT) ---
+*.jks
+*.keystore
+*.pem
+*.key
+*.json
+*.p12
+*.p8
+*.crt
+*.cer
+*.der
+*.enc
+secrets/
+keys/
+signing/
+config/
+credentials/
+playlist_keystore
+
+# --- Firebase & Play Store configs ---
+google-services.json
+service-account.json
+play-account.json
+
+# --- Environment files ---
+.env
+.env.*
+.env.local
+.env.production
+.env.development
+
+# --- Temporary or cache files ---
+*.cache
+*.bak
+*.tmp
+*.orig

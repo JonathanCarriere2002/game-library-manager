@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewCoverArt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/cover_art"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <ImageView
+                android:id="@+id/imageViewClearCoverArt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:contentDescription="@string/clear_description"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/textViewCoverArt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_clear_24" />
+
+            <ImageView
+                android:id="@+id/imageViewGameCover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/cover_art_description"
+                android:maxWidth="300dp"
+                android:maxHeight="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCoverArt"
+                app:layout_constraintWidth_percent="0.66"
+                app:srcCompat="@drawable/baseline_image_24" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/title"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewGameCover"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusable="true"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="100"
+                android:minHeight="48dp"
+                android:theme="@style/CustomEditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+                app:layout_constraintWidth_percent="0.66"
+                tools:ignore="LabelFor,VisualLintTextFieldSize,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textViewTitleValidation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:text="@string/required_field"
+                android:textColor="@color/red"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTitle"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <ImageView
+                android:id="@+id/imageViewClearTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/clear_description"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/editTextTitle"
+                app:layout_constraintTop_toTopOf="@+id/editTextTitle"
+                app:srcCompat="@drawable/baseline_clear_24" />
+
+            <TextView
+                android:id="@+id/textViewPlatform"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/platform"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleValidation"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <EditText
+                android:id="@+id/editTextPlatform"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusable="true"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="50"
+                android:minHeight="48dp"
+                android:theme="@style/CustomEditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPlatform"
+                app:layout_constraintWidth_percent="0.66"
+                tools:ignore="LabelFor,VisualLintTextFieldSize,SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/imageViewClearPlatform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/clear_description"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/editTextPlatform"
+                app:layout_constraintTop_toTopOf="@+id/editTextPlatform"
+                app:srcCompat="@drawable/baseline_clear_24" />
+
+            <TextView
+                android:id="@+id/textViewPlatformValidation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:text="@string/required_field"
+                android:textColor="@color/red"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPlatform"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/price"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPlatformValidation"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <EditText
+                android:id="@+id/editTextPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusable="true"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="8"
+                android:minHeight="48dp"
+                android:theme="@style/CustomEditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrice"
+                app:layout_constraintWidth_percent="0.66"
+                tools:ignore="LabelFor,VisualLintTextFieldSize,SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/imageViewClearPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/clear_description"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/editTextPrice"
+                app:layout_constraintTop_toTopOf="@+id/editTextPrice"
+                app:srcCompat="@drawable/baseline_clear_24" />
+
+            <TextView
+                android:id="@+id/textViewPriceValidation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:text="@string/required_field"
+                android:textColor="@color/red"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPrice"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <TextView
+                android:id="@+id/textViewPublisher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/publisher"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPriceValidation"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <EditText
+                android:id="@+id/editTextPublisher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusable="true"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="50"
+                android:minHeight="48dp"
+                android:theme="@style/CustomEditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPublisher"
+                app:layout_constraintWidth_percent="0.66"
+                tools:ignore="LabelFor,VisualLintTextFieldSize,SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/imageViewClearPublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/clear_description"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/editTextPublisher"
+                app:layout_constraintTop_toTopOf="@+id/editTextPublisher"
+                app:srcCompat="@drawable/baseline_clear_24" />
+
+            <TextView
+                android:id="@+id/textViewPublisherValidation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:text="@string/required_field"
+                android:textColor="@color/red"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPublisher"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <TextView
+                android:id="@+id/textViewReleaseDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/release_date"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPublisherValidation"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <EditText
+                android:id="@+id/editTextReleaseDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="true"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:theme="@style/CustomEditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewReleaseDate"
+                app:layout_constraintWidth_percent="0.66"
+                tools:ignore="LabelFor,VisualLintTextFieldSize,SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/imageViewClearReleaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/clear_description"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/editTextReleaseDate"
+                app:layout_constraintTop_toTopOf="@+id/editTextReleaseDate"
+                app:srcCompat="@drawable/baseline_clear_24" />
+
+            <TextView
+                android:id="@+id/textViewReleaseDateValidation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:text="@string/required_field"
+                android:textColor="@color/red"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextReleaseDate"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCompletionDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewReleaseDateValidation"
+                app:layout_constraintWidth_percent="0.66">
+
+                <TextView
+                    android:id="@+id/textViewCompletionDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/completion_date"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewCompletionDateOptional"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/optional"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextCompletionDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="true"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:theme="@style/CustomEditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompletionDate"
+                app:layout_constraintWidth_percent="0.66"
+                tools:ignore="LabelFor,VisualLintTextFieldSize,SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/imageViewClearCompletionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/clear_description"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/editTextCompletionDate"
+                app:layout_constraintTop_toTopOf="@+id/editTextCompletionDate"
+                app:srcCompat="@drawable/baseline_clear_24" />
+
+            <TextView
+                android:id="@+id/textViewCompletionDateValidation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:text="@string/completion_date_validation"
+                android:textColor="@color/red"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCompletionDate"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutPlaytime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCompletionDateValidation"
+                app:layout_constraintWidth_percent="0.66">
+
+                <TextView
+                    android:id="@+id/textViewPlaytime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/playtime"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewPlaytimeOptional"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/optional"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextPlaytime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusable="true"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="5"
+                android:minHeight="48dp"
+                android:theme="@style/CustomEditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutPlaytime"
+                app:layout_constraintWidth_percent="0.66"
+                tools:ignore="LabelFor,VisualLintTextFieldSize,SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/imageViewClearPlaytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/clear_description"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/editTextPlaytime"
+                app:layout_constraintTop_toTopOf="@+id/editTextPlaytime"
+                app:srcCompat="@drawable/baseline_clear_24" />
+
+            <TextView
+                android:id="@+id/textViewPlaytimeValidation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:text="@string/playtime_validation"
+                android:textColor="@color/red"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPlaytime"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <TextView
+                android:id="@+id/textViewSaveTo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/save_to"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPlaytimeValidation"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBacklogCollection"
+                android:layout_width="251dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSaveTo"
+                app:layout_constraintWidth_percent="0.66"
+                tools:ignore="TextSizeCheck">
+
+                <CheckBox
+                    android:id="@+id/checkBoxBacklog"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/white"
+                    android:focusable="true"
+                    android:text="@string/backlog"
+                    android:textColor="@color/white" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxCollection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/white"
+                    android:focusable="true"
+                    android:text="@string/collection"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCompletionWishlist"
+                android:layout_width="251dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutBacklogCollection"
+                app:layout_constraintWidth_percent="0.66">
+
+                <CheckBox
+                    android:id="@+id/checkBoxCompletion"
+                    android:buttonTint="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:text="@string/completion"
+                    android:textColor="@color/white"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxWishlist"
+                    android:buttonTint="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:text="@string/wishlist"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewSaveToValidation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:text="@string/category_selection"
+                android:textColor="@color/red"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompletionWishlist"
+                app:layout_constraintWidth_percent="0.66" />
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:background="@drawable/rounded_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:focusable="true"
+                android:text="@string/save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSaveToValidation"
+                app:layout_constraintWidth_percent="0.66"
+                tools:ignore="VisualLintButtonSize" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

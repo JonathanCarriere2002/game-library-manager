@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayoutActionMenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:elevation="4dp">
+
+    <View
+        android:layout_width="64dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textViewEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/baseline_edit_24"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:text="@string/edit"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/baseline_delete_24"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:text="@string/delete"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewBacklog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/baseline_format_list_bulleted_24"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCollection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/baseline_collections_24"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCompletion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/baseline_check_24"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewWishlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/baseline_star_24"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

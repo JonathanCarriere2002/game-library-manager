@@ -1,0 +1,68 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuItemSort"
+        android:textColor="@color/white"
+        android:title="@string/sort_by"
+        app:showAsAction="ifRoom|withText">
+        <menu>
+            <group android:id="@+id/menuGroupSort">
+                <item
+                    android:id="@+id/menuGroupItemTitle"
+                    android:textColor="@color/white"
+                    android:title="@string/title"
+                    app:showAsAction="never"
+                    android:icon="@drawable/baseline_radio_button_unchecked_24" />
+                <item
+                    android:id="@+id/menuGroupItemPlatform"
+                    android:textColor="@color/white"
+                    android:title="@string/platform"
+                    app:showAsAction="never"
+                    android:icon="@drawable/baseline_radio_button_unchecked_24" />
+                <item
+                    android:id="@+id/menuGroupItemPublisher"
+                    android:textColor="@color/white"
+                    android:title="@string/publisher"
+                    app:showAsAction="never"
+                    android:icon="@drawable/baseline_radio_button_unchecked_24" />
+                <item
+                    android:id="@+id/menuGroupItemCompletionRelease"
+                    android:textColor="@color/white"
+                    android:title="@string/release_date"
+                    app:showAsAction="never"
+                    android:icon="@drawable/baseline_radio_button_unchecked_24" />
+                <item
+                    android:id="@+id/menuGroupItemCategoryOption"
+                    android:textColor="@color/white"
+                    android:title=""
+                    app:showAsAction="never"
+                    android:icon="@drawable/baseline_radio_button_unchecked_24" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menuItemOrder"
+        android:textColor="@color/white"
+        android:title="@string/order"
+        app:showAsAction="ifRoom|withText">
+        <menu>
+            <group android:id="@+id/menuGroupOrder">
+                <item
+                    android:id="@+id/menuGroupItemAscending"
+                    android:textColor="@color/white"
+                    android:title="@string/ascending"
+                    app:showAsAction="never"
+                    android:icon="@drawable/baseline_radio_button_unchecked_24" />
+                <item
+                    android:id="@+id/menuGroupItemDescending"
+                    android:textColor="@color/white"
+                    android:title="@string/descending"
+                    app:showAsAction="never"
+                    android:icon="@drawable/baseline_radio_button_unchecked_24" />
+            </group>
+        </menu>
+    </item>
+
+</menu>
